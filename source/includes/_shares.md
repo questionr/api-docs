@@ -3,12 +3,13 @@
 ## Get All Shares
 
 ```shell
-curl "https://questionr.com/api/v1/shares" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/shares" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/shares HTTP/1.1
+GET /api/shares HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -49,11 +50,12 @@ ids | The ids of the shares to retrieve e.g. add a query string urlencoded `?ids
 > Below is a similar request with ids in a query string
 
 ```shell
-curl "https://questionr.com/api/v1/shares?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/shares?ids%5B%5D=711&ids%5B%5D=712" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
-GET /api/v1/shares?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
+GET /api/shares?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -62,12 +64,13 @@ Host: questionr.com
 ## Get a Specific Share
 
 ```shell
-curl "https://questionr.com/api/v1/shares/2" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/shares/2" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/shares/<ID> HTTP/1.1
+GET /api/shares/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -112,14 +115,15 @@ mailing_list_ids can be sent as part of the JSON payload.
 
 
 ```shell
-curl "https://questionr.com/api/v1/shares" \
+curl "https://questionr.com/api/shares" \
   --request POST \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
-POST /api/v1/shares HTTP/1.1
+POST /api/shares HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -163,13 +167,14 @@ mailing_list_ids can be sent as part of the JSON payload.
 
 
 ```shell
-curl "https:questionr.com/api/v1/shares/2" \
+curl "https:questionr.com/api/shares/2" \
   --request PATCH \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
-PATCH /api/v1/shares/<ID> HTTP/1.1
+PATCH /api/shares/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -208,13 +213,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/shares/2" \
+curl "https:questionr.com/api/shares/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret"
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-DELETE /api/v1/shares/<ID> HTTP/1.1
+DELETE /api/shares/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com

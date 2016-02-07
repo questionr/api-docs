@@ -3,12 +3,13 @@
 ## Get All Contacts
 
 ```shell
-curl "https://questionr.com/api/v1/contacts" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/contacts" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/contacts HTTP/1.1
+GET /api/contacts HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -24,18 +25,18 @@ Content-Type: application/json
 [
   {
     "id": 1557,
-    "email": "Fausto_1@questionr.com",
-    "first_name": "Fausto",
-    "last_name": "Dibbert",
+    "email": "Modesta_1@questionr.com",
+    "first_name": "Modesta",
+    "last_name": "Homenick",
     "user_id": null,
     "editable": true,
     "mailing_list_contact_ids": []
   },
   {
     "id": 1558,
-    "email": "Tate_2@questionr.com",
-    "first_name": "Tate",
-    "last_name": "Windler",
+    "email": "Providenci_2@questionr.com",
+    "first_name": "Providenci",
+    "last_name": "Witting",
     "user_id": null,
     "editable": true,
     "mailing_list_contact_ids": []
@@ -53,11 +54,12 @@ ids | The ids of the contacts to retrieve e.g. add a query string urlencoded `?i
 > Below is a similar request with ids in a query string
 
 ```shell
-curl "https://questionr.com/api/v1/contacts?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/contacts?ids%5B%5D=711&ids%5B%5D=712" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
-GET /api/v1/contacts?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
+GET /api/contacts?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -66,12 +68,13 @@ Host: questionr.com
 ## Get a Specific Contact
 
 ```shell
-curl "https://questionr.com/api/v1/contacts/2" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/contacts/2" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/contacts/<ID> HTTP/1.1
+GET /api/contacts/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -87,9 +90,9 @@ Content-Type: application/json
 {
   "contact": {
     "id": 1559,
-    "email": "Elmo_3@questionr.com",
-    "first_name": "Elmo",
-    "last_name": "Ebert",
+    "email": "Rigoberto_3@questionr.com",
+    "first_name": "Rigoberto",
+    "last_name": "Rohan",
     "user_id": null,
     "editable": true,
     "mailing_list_contact_ids": []
@@ -113,14 +116,15 @@ ID | The ID of the contact to retrieve
 
 
 ```shell
-curl "https://questionr.com/api/v1/contacts" \
+curl "https://questionr.com/api/contacts" \
   --request POST \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
-POST /api/v1/contacts HTTP/1.1
+POST /api/contacts HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -128,9 +132,9 @@ Host: questionr.com
 ```json
 {
   "contact": {
-    "email": "Jane_4@questionr.com",
-    "first_name": "Jane",
-    "last_name": "Pagac",
+    "email": "Karelle_4@questionr.com",
+    "first_name": "Karelle",
+    "last_name": "Padberg",
     "user_id": null,
     "editable": true
   }
@@ -147,9 +151,9 @@ Content-Type: application/json
 {
   "contact": {
     "id": 1561,
-    "email": "Kian_5@questionr.com",
-    "first_name": "Kian",
-    "last_name": "Fritsch",
+    "email": "Randy_5@questionr.com",
+    "first_name": "Randy",
+    "last_name": "Leannon",
     "user_id": null,
     "editable": true,
     "mailing_list_contact_ids": []
@@ -163,13 +167,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/contacts/2" \
+curl "https:questionr.com/api/contacts/2" \
   --request PATCH \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
-PATCH /api/v1/contacts/<ID> HTTP/1.1
+PATCH /api/contacts/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -177,9 +182,9 @@ Host: questionr.com
 ```json
 {
   "contact": {
-    "email": "Weldon_6@questionr.com",
-    "first_name": "Weldon",
-    "last_name": "Ryan",
+    "email": "Margret_6@questionr.com",
+    "first_name": "Margret",
+    "last_name": "Torp",
     "user_id": null,
     "editable": true
   }
@@ -196,9 +201,9 @@ Content-Type: application/json
 {
   "contact": {
     "id": 1563,
-    "email": "Leonora_7@questionr.com",
-    "first_name": "Leonora",
-    "last_name": "O'Reilly",
+    "email": "Franco_7@questionr.com",
+    "first_name": "Franco",
+    "last_name": "Crooks",
     "user_id": null,
     "editable": true,
     "mailing_list_contact_ids": []
@@ -213,13 +218,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/contacts/2" \
+curl "https:questionr.com/api/contacts/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret"
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-DELETE /api/v1/contacts/<ID> HTTP/1.1
+DELETE /api/contacts/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com

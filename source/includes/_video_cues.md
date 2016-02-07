@@ -3,12 +3,13 @@
 ## Get All Video Cues
 
 ```shell
-curl "https://questionr.com/api/v1/video_cues" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/video_cues" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/video_cues HTTP/1.1
+GET /api/video_cues HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -47,11 +48,12 @@ ids | The ids of the video_cues to retrieve e.g. add a query string urlencoded `
 > Below is a similar request with ids in a query string
 
 ```shell
-curl "https://questionr.com/api/v1/video_cues?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/video_cues?ids%5B%5D=711&ids%5B%5D=712" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
-GET /api/v1/video_cues?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
+GET /api/video_cues?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -60,12 +62,13 @@ Host: questionr.com
 ## Get a Specific Video Cue
 
 ```shell
-curl "https://questionr.com/api/v1/video_cues/2" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/video_cues/2" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/video_cues/<ID> HTTP/1.1
+GET /api/video_cues/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -103,14 +106,15 @@ ID | The ID of the video_cue to retrieve
 
 
 ```shell
-curl "https://questionr.com/api/v1/video_cues" \
+curl "https://questionr.com/api/video_cues" \
   --request POST \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
-POST /api/v1/video_cues HTTP/1.1
+POST /api/video_cues HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -146,13 +150,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/video_cues/2" \
+curl "https:questionr.com/api/video_cues/2" \
   --request PATCH \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
-PATCH /api/v1/video_cues/<ID> HTTP/1.1
+PATCH /api/video_cues/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -189,13 +194,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/video_cues/2" \
+curl "https:questionr.com/api/video_cues/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret"
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-DELETE /api/v1/video_cues/<ID> HTTP/1.1
+DELETE /api/video_cues/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com

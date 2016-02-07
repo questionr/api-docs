@@ -3,12 +3,13 @@
 ## Get All Invites
 
 ```shell
-curl "https://questionr.com/api/v1/invites" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/invites" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/invites HTTP/1.1
+GET /api/invites HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -45,11 +46,12 @@ ids | The ids of the invites to retrieve e.g. add a query string urlencoded `?id
 > Below is a similar request with ids in a query string
 
 ```shell
-curl "https://questionr.com/api/v1/invites?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/invites?ids%5B%5D=711&ids%5B%5D=712" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
-GET /api/v1/invites?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
+GET /api/invites?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -58,12 +60,13 @@ Host: questionr.com
 ## Get a Specific Invite
 
 ```shell
-curl "https://questionr.com/api/v1/invites/2" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/invites/2" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/invites/<ID> HTTP/1.1
+GET /api/invites/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -100,14 +103,15 @@ ID | The ID of the invite to retrieve
 
 
 ```shell
-curl "https://questionr.com/api/v1/invites" \
+curl "https://questionr.com/api/invites" \
   --request POST \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
-POST /api/v1/invites HTTP/1.1
+POST /api/invites HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -142,13 +146,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/invites/2" \
+curl "https:questionr.com/api/invites/2" \
   --request PATCH \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
-PATCH /api/v1/invites/<ID> HTTP/1.1
+PATCH /api/invites/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -184,13 +189,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/invites/2" \
+curl "https:questionr.com/api/invites/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret"
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-DELETE /api/v1/invites/<ID> HTTP/1.1
+DELETE /api/invites/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com

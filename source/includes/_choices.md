@@ -3,12 +3,13 @@
 ## Get All Choices
 
 ```shell
-curl "https://questionr.com/api/v1/choices" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/choices" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/choices HTTP/1.1
+GET /api/choices HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -47,11 +48,12 @@ ids | The ids of the choices to retrieve e.g. add a query string urlencoded `?id
 > Below is a similar request with ids in a query string
 
 ```shell
-curl "https://questionr.com/api/v1/choices?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/choices?ids%5B%5D=711&ids%5B%5D=712" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
-GET /api/v1/choices?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
+GET /api/choices?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -60,12 +62,13 @@ Host: questionr.com
 ## Get a Specific Choice
 
 ```shell
-curl "https://questionr.com/api/v1/choices/2" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/choices/2" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/choices/<ID> HTTP/1.1
+GET /api/choices/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -103,14 +106,15 @@ ID | The ID of the choice to retrieve
 
 
 ```shell
-curl "https://questionr.com/api/v1/choices" \
+curl "https://questionr.com/api/choices" \
   --request POST \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
-POST /api/v1/choices HTTP/1.1
+POST /api/choices HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -147,13 +151,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/choices/2" \
+curl "https:questionr.com/api/choices/2" \
   --request PATCH \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
-PATCH /api/v1/choices/<ID> HTTP/1.1
+PATCH /api/choices/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -191,13 +196,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/choices/2" \
+curl "https:questionr.com/api/choices/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret"
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-DELETE /api/v1/choices/<ID> HTTP/1.1
+DELETE /api/choices/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com

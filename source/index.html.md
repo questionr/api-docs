@@ -61,8 +61,9 @@ We have language bindings in Shell! You can view code examples in the dark area 
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: Questionr secret_id secret"
+curl "api_endpoint_here" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http

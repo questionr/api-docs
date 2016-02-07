@@ -3,12 +3,13 @@
 ## Get All Playlists
 
 ```shell
-curl "https://questionr.com/api/v1/playlists" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/playlists" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/playlists HTTP/1.1
+GET /api/playlists HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -55,11 +56,12 @@ ids | The ids of the playlists to retrieve e.g. add a query string urlencoded `?
 > Below is a similar request with ids in a query string
 
 ```shell
-curl "https://questionr.com/api/v1/playlists?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/playlists?ids%5B%5D=711&ids%5B%5D=712" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
-GET /api/v1/playlists?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
+GET /api/playlists?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -68,12 +70,13 @@ Host: questionr.com
 ## Get a Specific Playlist
 
 ```shell
-curl "https://questionr.com/api/v1/playlists/2" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/playlists/2" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/playlists/<ID> HTTP/1.1
+GET /api/playlists/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -115,14 +118,15 @@ ID | The ID of the playlist to retrieve
 
 
 ```shell
-curl "https://questionr.com/api/v1/playlists" \
+curl "https://questionr.com/api/playlists" \
   --request POST \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
-POST /api/v1/playlists HTTP/1.1
+POST /api/playlists HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -165,13 +169,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/playlists/2" \
+curl "https:questionr.com/api/playlists/2" \
   --request PATCH \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
-PATCH /api/v1/playlists/<ID> HTTP/1.1
+PATCH /api/playlists/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -215,13 +220,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/playlists/2" \
+curl "https:questionr.com/api/playlists/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret"
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-DELETE /api/v1/playlists/<ID> HTTP/1.1
+DELETE /api/playlists/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com

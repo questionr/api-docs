@@ -3,12 +3,13 @@
 ## Get All Questionnaires
 
 ```shell
-curl "https://questionr.com/api/v1/questionnaires" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/questionnaires" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/questionnaires HTTP/1.1
+GET /api/questionnaires HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -61,11 +62,12 @@ ids | The ids of the questionnaires to retrieve e.g. add a query string urlencod
 > Below is a similar request with ids in a query string
 
 ```shell
-curl "https://questionr.com/api/v1/questionnaires?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/questionnaires?ids%5B%5D=711&ids%5B%5D=712" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
-GET /api/v1/questionnaires?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
+GET /api/questionnaires?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -74,12 +76,13 @@ Host: questionr.com
 ## Get a Specific Questionnaire
 
 ```shell
-curl "https://questionr.com/api/v1/questionnaires/2" \
-  -H "Authorization: Questionr secret_id secret"
+curl "https://questionr.com/api/questionnaires/2" \
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-GET /api/v1/questionnaires/<ID> HTTP/1.1
+GET /api/questionnaires/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -124,14 +127,15 @@ ID | The ID of the questionnaire to retrieve
 
 
 ```shell
-curl "https://questionr.com/api/v1/questionnaires" \
+curl "https://questionr.com/api/questionnaires" \
   --request POST \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
-POST /api/v1/questionnaires HTTP/1.1
+POST /api/questionnaires HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -177,13 +181,14 @@ Content-Type: application/json
 
 
 ```shell
-curl "https:questionr.com/api/v1/questionnaires/2" \
+curl "https:questionr.com/api/questionnaires/2" \
   --request PATCH \
   -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
-PATCH /api/v1/questionnaires/<ID> HTTP/1.1
+PATCH /api/questionnaires/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
@@ -231,13 +236,14 @@ Deleting a questionnaire deletes the associated questions and responses.
 
 
 ```shell
-curl "https:questionr.com/api/v1/questionnaires/2" \
+curl "https:questionr.com/api/questionnaires/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret"
+  -H "Authorization: Questionr secret_id secret" \
+  -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
-DELETE /api/v1/questionnaires/<ID> HTTP/1.1
+DELETE /api/questionnaires/<ID> HTTP/1.1
 Authorization: Questionr secret_id secret
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
