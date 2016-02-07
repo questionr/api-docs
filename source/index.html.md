@@ -73,7 +73,7 @@ Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
 
-> Make sure to replace `$SECRET_ID` and `$SECRET` with your API $SECRET_ID and $SECRET.
+> Make sure to replace `$SECRET_ID` and `$SECRET` with your API secret_id and secret.
 
 Questionr uses API keys to allow access to the API. You can generate a new API key in your [Questionr Dashboard](https://questionr.com/dashboard/settings/tokens).
 
