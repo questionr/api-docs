@@ -4,13 +4,13 @@
 
 ```shell
 curl "https://questionr.com/api/text_collects" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 GET /api/text_collects HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -47,12 +47,12 @@ ids | The ids of the text_collects to retrieve e.g. add a query string urlencode
 
 ```shell
 curl "https://questionr.com/api/text_collects?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
 GET /api/text_collects?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -61,13 +61,13 @@ Host: questionr.com
 
 ```shell
 curl "https://questionr.com/api/text_collects/2" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 GET /api/text_collects/<ID> HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -105,14 +105,14 @@ ID | The ID of the text_collect to retrieve
 ```shell
 curl "https://questionr.com/api/text_collects" \
   --request POST \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
 POST /api/text_collects HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -148,13 +148,13 @@ Content-Type: application/json
 ```shell
 curl "https:questionr.com/api/text_collects/2" \
   --request PATCH \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
 PATCH /api/text_collects/<ID> HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -191,13 +191,13 @@ Content-Type: application/json
 ```shell
 curl "https:questionr.com/api/text_collects/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 DELETE /api/text_collects/<ID> HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```

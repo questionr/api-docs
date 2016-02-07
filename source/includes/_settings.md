@@ -4,13 +4,13 @@
 
 ```shell
 curl "https://questionr.com/api/settings" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 GET /api/settings HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -59,12 +59,12 @@ ids | The ids of the settings to retrieve e.g. add a query string urlencoded `?i
 
 ```shell
 curl "https://questionr.com/api/settings?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
 GET /api/settings?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -73,13 +73,13 @@ Host: questionr.com
 
 ```shell
 curl "https://questionr.com/api/settings/2" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 GET /api/settings/<ID> HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -123,14 +123,14 @@ ID | The ID of the settings to retrieve
 ```shell
 curl "https://questionr.com/api/settings" \
   --request POST \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
 POST /api/settings HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -178,13 +178,13 @@ Content-Type: application/json
 ```shell
 curl "https:questionr.com/api/settings/2" \
   --request PATCH \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
 PATCH /api/settings/<ID> HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -233,13 +233,13 @@ Content-Type: application/json
 ```shell
 curl "https:questionr.com/api/settings/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 DELETE /api/settings/<ID> HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```

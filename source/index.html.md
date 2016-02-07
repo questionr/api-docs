@@ -62,26 +62,26 @@ We have language bindings in Shell! You can view code examples in the dark area 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 GET /endpoint HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
 
-> Make sure to replace `secret_id` and `secret` with your API secret_id and secret.
+> Make sure to replace `$SECRET_ID` and `$SECRET` with your API $SECRET_ID and $SECRET.
 
 Questionr uses API keys to allow access to the API. You can generate a new API key in your [Questionr Dashboard](https://questionr.com/dashboard/settings/tokens).
 
 Questionr expects the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: secret_id secret`
+`Authorization: Questionr $SECRET_ID $SECRET`
 
 <aside class="notice">
-You must replace <code>secret_id</code> and <code>secret</code> with your API secret_id and secret.
+You must replace <code>$SECRET_ID</code> and <code>$SECRET</code> with your API $SECRET_ID and $SECRET.
 </aside>
 

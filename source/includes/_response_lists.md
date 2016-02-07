@@ -4,13 +4,13 @@
 
 ```shell
 curl "https://questionr.com/api/response_lists" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 GET /api/response_lists HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -25,7 +25,7 @@ Content-Type: application/json
 [
   {
     "id": 1093,
-    "created_at": "2016-02-07T09:05:12.836Z",
+    "created_at": "2016-02-07T09:11:54.900Z",
     "accepted_release": null,
     "response_ids": [],
     "user_id": 1092,
@@ -33,7 +33,7 @@ Content-Type: application/json
   },
   {
     "id": 1095,
-    "created_at": "2016-02-07T09:05:12.841Z",
+    "created_at": "2016-02-07T09:11:54.905Z",
     "accepted_release": null,
     "response_ids": [],
     "user_id": 1094,
@@ -53,12 +53,12 @@ ids | The ids of the response_lists to retrieve e.g. add a query string urlencod
 
 ```shell
 curl "https://questionr.com/api/response_lists?ids%5B%5D=711&ids%5B%5D=712" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 ```http
 GET /api/response_lists?ids%5B%5D=711&ids%5B%5D=712 HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -67,13 +67,13 @@ Host: questionr.com
 
 ```shell
 curl "https://questionr.com/api/response_lists/2" \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 GET /api/response_lists/<ID> HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -88,7 +88,7 @@ Content-Type: application/json
 {
   "response_list": {
     "id": 1097,
-    "created_at": "2016-02-07T09:05:12.888Z",
+    "created_at": "2016-02-07T09:11:54.952Z",
     "accepted_release": null,
     "response_ids": [],
     "user_id": 1096,
@@ -115,14 +115,14 @@ ID | The ID of the response_list to retrieve
 ```shell
 curl "https://questionr.com/api/response_lists" \
   --request POST \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 
 ```http
 POST /api/response_lists HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -146,7 +146,7 @@ Content-Type: application/json
 {
   "response_list": {
     "id": 1101,
-    "created_at": "2016-02-07T09:05:12.981Z",
+    "created_at": "2016-02-07T09:11:55.045Z",
     "accepted_release": null,
     "response_ids": [],
     "user_id": 1100,
@@ -163,13 +163,13 @@ Content-Type: application/json
 ```shell
 curl "https:questionr.com/api/response_lists/2" \
   --request PATCH \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json" \
   --data "$JSON"
 ```
 ```http
 PATCH /api/response_lists/<ID> HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
@@ -193,7 +193,7 @@ Content-Type: application/json
 {
   "response_list": {
     "id": 1105,
-    "created_at": "2016-02-07T09:05:13.074Z",
+    "created_at": "2016-02-07T09:11:55.138Z",
     "accepted_release": null,
     "response_ids": [],
     "user_id": 1104,
@@ -211,13 +211,13 @@ Content-Type: application/json
 ```shell
 curl "https:questionr.com/api/response_lists/2" \
   --request DELETE \
-  -H "Authorization: Questionr secret_id secret" \
+  -H "Authorization: Questionr $SECRET_ID $SECRET" \
   -H "Accept: application/vnd.questionr.com; version=1,application/json"
 ```
 
 ```http
 DELETE /api/response_lists/<ID> HTTP/1.1
-Authorization: Questionr secret_id secret
+Authorization: Questionr $SECRET_ID $SECRET
 Accept: application/vnd.questionr.com; version=1,application/json
 Host: questionr.com
 ```
