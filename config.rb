@@ -35,6 +35,16 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   # activate :relative_assets
-  # activate :asset_hash
-  # activate :gzip
+  activate :asset_hash
+  activate :gzip
+end
+
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.deploy_method = :rsync
+  deploy.host = '33.33.33.20'
+  if ENV["VAGRANT_DEPLOY"].nil?
+    deploy.host = 'docs.questionr.com'
+  end
+  deploy.path = '/etc/nginx/html/api-docs/'
 end
